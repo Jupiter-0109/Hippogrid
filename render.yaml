@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: hippogrid-backend
+    env: python
+    buildCommand: "pip install -r requirements.txt && pip install psycopg[binary] gunicorn"
+    startCommand: "gunicorn backend.main:app -w 2 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT"
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: RANDOM_SEED
+        value: 42
+      - key: DATABASE_URL
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
