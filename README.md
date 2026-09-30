@@ -4,7 +4,7 @@
 [![Python 3.10.7](https://img.shields.io/badge/python-3.10.7-blue.svg)](https://www.python.org/downloads/release/python-3107/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Tests: 72 Passing](https://img.shields.io/badge/tests-72%20passed-brightgreen.svg)]()
-[![Repository](https://img.shields.io/badge/GitHub-Joelrajjoe%2FHippogrid-181717.svg?logo=github)](https://github.com/Joelrajjoe/Hippogrid.git)
+
 
 > *"Don't just predict the shortage. Guarantee the service."*
 
