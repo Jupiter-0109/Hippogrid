@@ -1,0 +1,5 @@
+id,name,category,criticality,min_staff_required,requires_uninterrupted_power
+diarrhoeal_care,Diarrhoeal Disease Management & Oral Rehydration,ACUTE_CARE,CRITICAL,1,False
+maternal_delivery,Maternal Care & Normal Delivery,MATERNAL,CRITICAL,2,True
+vaccination,Routine Immunization & Cold Chain,PREVENTIVE,CRITICAL,1,True
+fever_malaria,Fever & Malaria Case Management,INFECTIOUS,HIGH,1,False

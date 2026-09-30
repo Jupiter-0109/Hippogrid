@@ -1,0 +1,116 @@
+# HippoGrid Service-Capability Dependency Map
+# Healthcare Infrastructure & Primary-care Planning Optimization Grid
+#
+# IMPORTANT NOTICE:
+# All dependency mappings are PROPOSED prototype assumptions.
+# Do not claim clinical validation.
+
+version: "2.0"
+description: "PHC Service-Capability Graph Dependency Topology"
+
+services:
+  - id: "diarrhoeal_care"
+    name: "Diarrhoeal Disease Management & Oral Rehydration"
+    category: "ACUTE_CARE"
+    criticality: "CRITICAL"
+    dependencies:
+      drugs:
+        - id: "ORS"
+          burn_rate_per_patient: 3.0
+          critical_reserve: 30.0
+        - id: "zinc"
+          burn_rate_per_patient: 2.0
+          critical_reserve: 20.0
+        - id: "IV_fluids"
+          burn_rate_per_patient: 1.0
+          critical_reserve: 10.0
+      staff:
+        min_nurses: 1
+        min_anms: 1
+      beds:
+        requires_inpatient_beds: true
+        admission_rate: 0.15
+        avg_bed_days: 1.0
+      power:
+        mandatory: false
+        min_backup_hours: 6.0
+      road_access:
+        max_transit_delay_hours: 12.0
+        replenishment_blockage_impact: true
+
+  - id: "maternal_delivery"
+    name: "Maternal Care & Normal Delivery"
+    category: "MATERNAL"
+    criticality: "CRITICAL"
+    dependencies:
+      drugs:
+        - id: "oxytocin"
+          burn_rate_per_patient: 2.0
+          critical_reserve: 10.0
+        - id: "IV_fluids"
+          burn_rate_per_patient: 1.5
+          critical_reserve: 8.0
+      staff:
+        min_nurses: 2
+        min_anms: 1
+      beds:
+        requires_inpatient_beds: true
+        admission_rate: 1.0
+        avg_bed_days: 2.0
+      power:
+        mandatory: true
+        min_backup_hours: 24.0
+        cold_chain_required: true
+      road_access:
+        max_transit_delay_hours: 6.0
+        replenishment_blockage_impact: true
+
+  - id: "vaccination"
+    name: "Routine Immunization & Cold Chain"
+    category: "PREVENTIVE"
+    criticality: "CRITICAL"
+    dependencies:
+      drugs:
+        - id: "vaccine_penta"
+          burn_rate_per_patient: 1.0
+          critical_reserve: 15.0
+      staff:
+        min_nurses: 1
+        min_anms: 1
+      beds:
+        requires_inpatient_beds: false
+        admission_rate: 0.0
+        avg_bed_days: 0.0
+      power:
+        mandatory: true
+        min_backup_hours: 24.0
+        cold_chain_required: true
+      road_access:
+        max_transit_delay_hours: 8.0
+        replenishment_blockage_impact: true
+
+  - id: "fever_malaria"
+    name: "Fever & Malaria Case Management"
+    category: "INFECTIOUS"
+    criticality: "HIGH"
+    dependencies:
+      drugs:
+        - id: "paracetamol"
+          burn_rate_per_patient: 1.5
+          critical_reserve: 40.0
+        - id: "ACT_antimalarial"
+          burn_rate_per_patient: 0.6
+          critical_reserve: 15.0
+      staff:
+        min_nurses: 1
+        min_anms: 0
+      beds:
+        requires_inpatient_beds: false
+        admission_rate: 0.05
+        avg_bed_days: 1.0
+      power:
+        mandatory: false
+        min_backup_hours: 6.0
+      road_access:
+        max_transit_delay_hours: 18.0
+        replenishment_blockage_impact: true

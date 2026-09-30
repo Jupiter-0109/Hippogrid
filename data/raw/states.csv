@@ -1,0 +1,4 @@
+code,name,start_date,end_date,flood_event_cap
+STA,State A (Highland Region),2024-01-01,2025-06-30,999
+STB,State B (Riverine Valley),2024-07-01,2025-06-30,999
+STC,State C (Plateau Corridor),2024-01-01,2025-06-30,2

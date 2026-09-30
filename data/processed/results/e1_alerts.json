@@ -1,0 +1,29 @@
+{
+  "simulation_result": true,
+  "experiment_id": "E1",
+  "title": "Alert Mechanism Benchmark: Stock Alerts vs SCH Alerts vs Composite Risk",
+  "total_evaluated_events": 200,
+  "results": {
+    "stock_alerts": {
+      "mechanism": "Univariate Days-of-Stock Threshold (<= 3 days)",
+      "mean_lead_time_hours": 11.7,
+      "precision": 0.6164,
+      "recall": 0.5488,
+      "f1_score": 0.5806
+    },
+    "sch_alerts": {
+      "mechanism": "HippoGrid Multi-Dependency Service Capability Horizon (SCH <= 48h)",
+      "mean_lead_time_hours": 47.3,
+      "precision": 0.8372,
+      "recall": 0.878,
+      "f1_score": 0.8571
+    },
+    "composite_risk": {
+      "mechanism": "Coupled SCH Horizon + Corridors Logistics Weather Risk",
+      "mean_lead_time_hours": 53.5,
+      "precision": 0.9111,
+      "recall": 1.0,
+      "f1_score": 0.9535
+    }
+  }
+}

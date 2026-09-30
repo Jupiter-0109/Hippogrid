@@ -1,0 +1,61 @@
+{
+  "simulation_result": true,
+  "experiment_id": "E6",
+  "title": "Systematic Architectural Ablation Study on Compound Shock Resilience",
+  "baseline_scenario": {
+    "rain_multiplier": 2.5,
+    "road_closure_fraction": 0.3,
+    "staff_absence_fraction": 0.2,
+    "demand_surge_multiplier": 1.6
+  },
+  "results": [
+    {
+      "ablation": "Full HippoGrid (All Systems Active)",
+      "removed_component": "None",
+      "service_continuity_pct": 94.2,
+      "unserved_demand_patients": 48,
+      "compromised_phcs": 1,
+      "relative_risk": 1.0
+    },
+    {
+      "ablation": "Without SCH (Univariate stock monitoring)",
+      "removed_component": "Service Capability Graph (SCH)",
+      "service_continuity_pct": 76.5,
+      "unserved_demand_patients": 184,
+      "compromised_phcs": 4,
+      "relative_risk": 3.83
+    },
+    {
+      "ablation": "Without Conformal Prediction (Point forecast only)",
+      "removed_component": "Conformal Uncertainty Intervals",
+      "service_continuity_pct": 82.0,
+      "unserved_demand_patients": 138,
+      "compromised_phcs": 3,
+      "relative_risk": 2.87
+    },
+    {
+      "ablation": "Without Equity Constraints (Cost-only allocation)",
+      "removed_component": "Minimum Equity Protection Floor",
+      "service_continuity_pct": 81.4,
+      "unserved_demand_patients": 142,
+      "compromised_phcs": 3,
+      "relative_risk": 2.95
+    },
+    {
+      "ablation": "Without Reverse Stress Engine (Single shock design)",
+      "removed_component": "Compound Shock Frontier Search",
+      "service_continuity_pct": 74.0,
+      "unserved_demand_patients": 204,
+      "compromised_phcs": 5,
+      "relative_risk": 4.25
+    },
+    {
+      "ablation": "Without Federated Learning (Isolated State C)",
+      "removed_component": "FedAvg Collaborative Learning",
+      "service_continuity_pct": 78.8,
+      "unserved_demand_patients": 166,
+      "compromised_phcs": 4,
+      "relative_risk": 3.46
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "simulation_result": true,
+  "disclaimer": "Simulation result. Transparent FedAvg parameter averaging without raw row sharing. Do not claim formal differential privacy guarantees.",
+  "task": "Rainfall Features -> Diarrhoeal Demand Uplift",
+  "eval_cohort": "State C Held-Out High-Rain / Flood Disruption Events (144 facility-days)",
+  "test_samples_count": 144,
+  "rounds": 10,
+  "local_epochs_per_round": 15,
+  "parameter_count": 6,
+  "features": [
+    "rainfall",
+    "rainfall_lag_1",
+    "rainfall_lag_2",
+    "rainfall_lag_3",
+    "rainfall_lag_4"
+  ],
+  "clients": [
+    {
+      "client": "State_A",
+      "samples": 6564,
+      "history": "18 months"
+    },
+    {
+      "client": "State_B",
+      "samples": 4380,
+      "history": "12 months"
+    },
+    {
+      "client": "State_C",
+      "samples": 6420,
+      "history": "18 months (normal periods only)"
+    }
+  ],
+  "results": {
+    "local": {
+      "strategy": "Local (State C normal data only, 0 cross-state pattern transfer)",
+      "mae": 9.9514
+    },
+    "centralized": {
+      "strategy": "Centralized (Pooled raw data across all states)",
+      "mae": 2.6533
+    },
+    "federated": {
+      "strategy": "Federated FedAvg (Zero raw data transfer, 10 rounds)",
+      "mae": 2.5898,
+      "improvement_over_local_pct": 73.98
+    }
+  },
+  "convergence": [
+    {
+      "round": 1,
+      "test_mae_state_c_flood": 6.0042
+    },
+    {
+      "round": 2,
+      "test_mae_state_c_flood": 4.2759
+    },
+    {
+      "round": 3,
+      "test_mae_state_c_flood": 3.2651
+    },
+    {
+      "round": 4,
+      "test_mae_state_c_flood": 2.7626
+    },
+    {
+      "round": 5,
+      "test_mae_state_c_flood": 2.5372
+    },
+    {
+      "round": 6,
+      "test_mae_state_c_flood": 2.4882
+    },
+    {
+      "round": 7,
+      "test_mae_state_c_flood": 2.4992
+    },
+    {
+      "round": 8,
+      "test_mae_state_c_flood": 2.5342
+    },
+    {
+      "round": 9,
+      "test_mae_state_c_flood": 2.5669
+    },
+    {
+      "round": 10,
+      "test_mae_state_c_flood": 2.5898
+    }
+  ],
+  "experiment_id": "E5",
+  "title": "Disruption Response Learning: Local vs Centralized vs Federated FedAvg"
+}

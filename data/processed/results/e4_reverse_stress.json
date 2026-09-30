@@ -1,0 +1,27 @@
+{
+  "simulation_result": true,
+  "experiment_id": "E4",
+  "title": "Reverse Stress Search Algorithm: Random vs Evolutionary Search",
+  "breach_definition": ">= 3 PHCs lose an essential service for >= 48 continuous hours",
+  "results": {
+    "random_search": {
+      "algorithm": "Uniform Random Multi-Hazard Sampling",
+      "evaluations_count": 25,
+      "smallest_breach_shock_norm": 0.489,
+      "plausibility_score": 0.471
+    },
+    "evolutionary_search": {
+      "algorithm": "HippoGrid Directed Evolutionary Stress Engine",
+      "evaluations_count": 10,
+      "smallest_breach_shock_norm": 0.423,
+      "plausibility_score": 0.546,
+      "discovered_shock_parameters": {
+        "rain_multiplier": 2.35,
+        "road_closure_fraction": 0.34,
+        "staff_absence_fraction": 0.27,
+        "demand_surge_multiplier": 1.87
+      },
+      "search_efficiency_gain_pct": 13.5
+    }
+  }
+}

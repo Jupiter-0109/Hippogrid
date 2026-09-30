@@ -1,0 +1,29 @@
+# HippoGrid Global Configuration Parameters
+# Healthcare Infrastructure & Primary-care Planning Optimization Grid
+
+simulation:
+  random_seed: 42
+  time_step_hours: 1
+  forecast_horizon_hours: 72
+  stress_test_duration_hours: 168 # 7 days
+
+network:
+  max_transfer_radius_km: 75.0
+  road_speed_default_kmh: 40.0
+  road_speed_degraded_kmh: 20.0
+  power_outage_generator_reserve_hours: 12.0
+  solar_recharge_efficiency: 0.85
+
+thresholds:
+  critical_continuity_hours: 12.0
+  warning_continuity_hours: 24.0
+  healthy_continuity_hours: 48.0
+  sla_minimum_service_availability: 0.95
+  cold_chain_min_temp_celsius: 2.0
+  cold_chain_max_temp_celsius: 8.0
+
+database:
+  pool_size: 10
+  max_overflow: 20
+  pool_timeout_seconds: 30
+  pool_recycle_seconds: 1800

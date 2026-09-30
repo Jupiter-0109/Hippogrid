@@ -1,0 +1,7 @@
+code,name,district_code,state_code,latitude,longitude,cold_chain_capacity_liters,dry_storage_capacity_sqm
+WH-DST-A1,North Aranya District Central Medical Depot,DST-A1,STA,24.6004,73.7275,15000.0,750.0
+WH-DST-A2,South Devgarh District Central Medical Depot,DST-A2,STA,24.135,73.965,15000.0,750.0
+WH-DST-B1,East Barani District Central Medical Depot,DST-B1,STB,23.849,74.327,15000.0,750.0
+WH-DST-B2,West Kusuma District Central Medical Depot,DST-B2,STB,23.465,74.615,15000.0,750.0
+WH-DST-C1,Chinar Ridge District Central Medical Depot,DST-C1,STC,25.225,75.135,15000.0,750.0
+WH-DST-C2,Dharani Plain District Central Medical Depot,DST-C2,STC,25.665,75.555,15000.0,750.0

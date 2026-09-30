@@ -1,0 +1,25 @@
+{
+  "simulation_result": true,
+  "experiment_id": "E2",
+  "title": "Uncertainty Quantification: Raw Gaussian Forecast vs Split Conformal Intervals",
+  "target": "diarrhoeal_cases",
+  "target_coverage": 0.9,
+  "alpha": 0.1,
+  "calibration_samples": 3852,
+  "test_samples": 3852,
+  "results": {
+    "raw_gaussian_heuristic": {
+      "method": "Parametric Gaussian Residuals (y_hat +/- 1.645 * sigma)",
+      "empirical_coverage": 0.8891,
+      "mean_interval_width": 3.97,
+      "coverage_satisfied": false
+    },
+    "split_conformal_prediction": {
+      "method": "HippoGrid Split Conformal Prediction (y_hat +/- q_hat_cal)",
+      "empirical_coverage": 0.8881,
+      "mean_interval_width": 3.96,
+      "conformal_quantile_q": 1.98,
+      "coverage_satisfied": false
+    }
+  }
+}

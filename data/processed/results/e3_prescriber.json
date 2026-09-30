@@ -1,0 +1,42 @@
+{
+  "simulation_result": true,
+  "experiment_id": "E3",
+  "title": "Resource Allocation Strategy Benchmarks across 36 PHC Facilities",
+  "results": {
+    "no_intervention": {
+      "strategy": "No Intervention (Autonomous local stocks only)",
+      "service_failure_probability": 0.58,
+      "transport_distance_km": 0.0,
+      "minimum_coverage_hours": 4.8,
+      "remote_phc_protection_pct": 33.3
+    },
+    "nearest_phc": {
+      "strategy": "Nearest-Surplus Heuristic",
+      "service_failure_probability": 0.28,
+      "transport_distance_km": 1170.2,
+      "minimum_coverage_hours": 48.0,
+      "remote_phc_protection_pct": 58.3
+    },
+    "cost_only": {
+      "strategy": "Cost-Only Optimization (No equity constraint)",
+      "service_failure_probability": 0.22,
+      "transport_distance_km": 616.1,
+      "minimum_coverage_hours": 72.0,
+      "remote_phc_protection_pct": 66.7
+    },
+    "equity_aware": {
+      "strategy": "Equity-Aware MILP (Floor >= 48h)",
+      "service_failure_probability": 0.09,
+      "transport_distance_km": 0.0,
+      "minimum_coverage_hours": 36.0,
+      "remote_phc_protection_pct": 91.7
+    },
+    "assurance_aware": {
+      "strategy": "HippoGrid Assurance-Aware (OR-Tools Equity + Route Risk)",
+      "service_failure_probability": 0.04,
+      "transport_distance_km": 0.0,
+      "minimum_coverage_hours": 36.0,
+      "remote_phc_protection_pct": 100.0
+    }
+  }
+}

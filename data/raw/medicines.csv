@@ -1,0 +1,9 @@
+id,name,category,unit,is_cold_chain_required,min_temp_celsius,max_temp_celsius,driven_by_patient_metric,units_per_case
+ORS,Oral Rehydration Salts (ORS),REHYDRATION,SACHET,False,,,diarrhoeal_cases,3.0
+IV_fluids,Intravenous Ringer Lactate / Normal Saline,IV_FLUID,BOTTLE,False,,,emergency_cases,1.8
+zinc,Zinc Sulfate 20mg Dispersible Tablets,SUPPLEMENT,STRIP,False,,,diarrhoeal_cases,2.0
+oxytocin,Oxytocin Injection 10 IU,UTEROTONIC,AMPOULE,True,2.0,8.0,deliveries,2.0
+paracetamol,Paracetamol 500mg Tablets,ANTIPYRETIC,STRIP,False,,,fever_cases,1.5
+ACT_antimalarial,Artemisinin-based Combination Therapy (ACT),ANTIMALARIAL,STRIP,False,,,fever_cases,0.6
+vaccine_penta,Pentavalent Vaccine (DTP-HepB-Hib),VACCINE,VIAL,True,2.0,8.0,deliveries,1.0
+amlodipine,Amlodipine 5mg Tablets,CARDIOVASCULAR,STRIP,False,,,opd_cases,0.4
